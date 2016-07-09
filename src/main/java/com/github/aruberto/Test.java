@@ -9,20 +9,16 @@ public class Test {
     public static void someFunction(SomeUtilClass util) {
 
         // This fails indentation rule
-        util.myLambdaUtil(
-                "FIRST_ARG",
-                (string) -> System.out.println(string.trim()),
-                "SECOND_ARG",
-                () -> "WHAT WHAT!"
-        );
+        util.myLambdaUtil("FIRST_ARG",
+                          (string) -> System.out.println(string.trim()),
+                          "SECOND_ARG",
+                          () -> "WHAT WHAT!");
 
         // This passes indentation rule
-        util.myLambdaUtil(
-                "FIRST_ARG",
+        util.myLambdaUtil("FIRST_ARG",
             (string) -> System.out.println(string.trim()),
-                "SECOND_ARG",
-            () -> "WHAT WHAT!"
-        );
+                          "SECOND_ARG",
+            () -> "WHAT WHAT!");
 
         // This fails indentation rule
         Function<String, String> someFunction1 =
