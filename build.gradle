@@ -1,0 +1,11 @@
+apply plugin: 'checkstyle'
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
+}
+
+checkstyle {
+  toolVersion = '7.0'
+  configFile = new File(rootDir, 'checkstyle.xml')
+}
